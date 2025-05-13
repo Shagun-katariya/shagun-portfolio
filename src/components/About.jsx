@@ -3,7 +3,7 @@ import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services } from "../assets/constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -47,11 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        I’m Shagun Katariya, and I recently graduated from the IIT Kharagpur. I’ve worked as a Founding Engineer Intern at startups like InveeSync and Datadive AI(WhatsYum), and also interned at Samsung R&D. My experience spans full-stack development using React, Next.js, Node.js, and tools like AWS, PostgreSQL, and Prisma. I’ve built scalable apps, AI-driven tools, and secure APIs, and contributed to performance-optimized frontend systems. I also hold a Codeforces rating of 1356, ranked in the top 3% in competitive programming.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10'>
