@@ -10,8 +10,22 @@ import {
 
 import CanvasLoader from "../Loader";
 
+import { ErrorBoundary } from 'react-error-boundary';
+
+const FallbackComponent = ({ error }) => (
+  <div>
+    <h2>Something went wrong in the 3D component:</h2>
+    <p>{error.message}</p>
+  </div>
+);
+
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
+  
+  // Add error handling for texture loading
+  if (!decal) {
+    return null;
+  }
 
   return (
     <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
@@ -39,18 +53,20 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+    <ErrorBoundary FallbackComponent={FallbackComponent}>
+      <Canvas
+        frameloop='demand'
+        dpr={[1, 2]}
+        gl={{ preserveDrawingBuffer: true }}
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls enableZoom={false} />
+          <Ball imgUrl={icon} />
+          <Preload all />
+        </Suspense>
 
-      <Preload all />
-    </Canvas>
+      </Canvas>
+    </ErrorBoundary>
   );
 };
 

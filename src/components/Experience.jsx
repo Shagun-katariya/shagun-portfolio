@@ -48,7 +48,26 @@ const ExperienceCard = ({ experience }) => {
             key={`experience-point-${index}`}
             className='text-white-100 text-[14px] pl-1 tracking-wider'
           >
-            {point}
+            {typeof point === 'object' && point.text ? (
+              <>
+                {point.text}
+                {point.link && (
+                  <>
+                    {' '}
+                    <a 
+                      href={point.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-300 underline"
+                    >
+                      {point.linkText || 'Link'}
+                    </a>
+                  </>
+                )}
+              </>
+            ) : (
+              point
+            )}
           </li>
         ))}
       </ul>

@@ -151,10 +151,24 @@ const experiences = [
     iconBg: "#383E56",
     date: "Dec 2024 - Present",
     points: [
-      "Built an AI app using ElectronJS, Google Auth, reducing manual data handling time by 15 mins/order",
-      "Engineered reusable, and responsive components using ReactJS, Tailwind CSS, and Framer Motion",
-      "Utilized state management libraries, and tools such as AWS S3 and Redux to deliver the data security",
-      "Implemented secure REST APIs with ExpressJS and PostgreSQL, improving CRUD efficiency by 20%",
+      {
+        text: "Developed factory ERP using the NextJS to streamline orders with complex multi-module CRUD flows",
+        link: null
+      },
+      {
+        text: "Created company portfolio using ReactJS and Tailwind CSS, enhancing brand and product showcase",
+        link: "https://inveesync.in/",
+        linkText: "View Portfolio"
+      },
+      {
+        text: "Built AI-powered desktop app to parse order emails and auto-fill Tally, cutting time from 15 mins to secs",
+        link: "https://drive.google.com/file/d/19aX1R4r9PGki4-v0dC-sIJ8qllPRlDN_/view",
+        linkText: "View App"
+      },
+      {
+        text: "Secured and scalable data handling with Redux, AWS S3, and RESTful ExpressJS–PostgreSQL APIs",
+        link: null
+      },
     ],
   },
   {
@@ -176,9 +190,20 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2024 - Mar 2024",
     points: [
-      "Created Dashboard using HTML, CSS, and JS, resulting in a 1.25% improvement in website performance",
-      "Built an AI WhatsApp chatbot for stores using Petpooja & WhatsApp APIs, for 24/7 items ordering",
-      "Employed MySQL, Amazon RDS, in conjunction with EC2 and Lambda functions to ensure security",
+      {
+        text: "Developed an AI WhatsApp chatbot for the restaurants to automate the ordering, reducing staff load",
+        link: null
+      },
+      {
+        text: "Engineered backend workflows using MySQL, AWS, to ensure data integrity and secure message handling",
+        link: null
+      },
+      {
+        text: "Implemented responsive UI for restaurant onboarding using HTML, CSS, and JavaScript on GoDadd",
+        link: "https://whatsyum.com/",
+        linkText: "View Website"
+      },
+      
     ],
   }
 ];
