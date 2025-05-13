@@ -10,18 +10,9 @@ import {
 
 import CanvasLoader from "../Loader";
 
-import { ErrorBoundary } from 'react-error-boundary';
-
-const FallbackComponent = ({ error }) => (
-  <div>
-    <h2>Something went wrong in the 3D component:</h2>
-    <p>{error.message}</p>
-  </div>
-);
-
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
-  
+
   // Add error handling for texture loading
   if (!decal) {
     return null;
@@ -34,7 +25,7 @@ const Ball = (props) => {
       <mesh castShadow receiveShadow scale={2.75}>
         <icosahedronGeometry args={[1, 1]} />
         <meshStandardMaterial
-          color='#fff8eb'
+          color="#fff8eb"
           polygonOffset
           polygonOffsetFactor={-5}
           flatShading
@@ -53,20 +44,17 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <ErrorBoundary FallbackComponent={FallbackComponent}>
-      <Canvas
-        frameloop='demand'
-        dpr={[1, 2]}
-        gl={{ preserveDrawingBuffer: true }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls enableZoom={false} />
-          <Ball imgUrl={icon} />
-          <Preload all />
-        </Suspense>
-
-      </Canvas>
-    </ErrorBoundary>
+    <Canvas
+      frameloop="demand"
+      dpr={[1, 2]}
+      gl={{ preserveDrawingBuffer: true }}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls enableZoom={false} />
+        <Ball imgUrl={icon} />
+        <Preload all />
+      </Suspense>
+    </Canvas>
   );
 };
 
