@@ -21,13 +21,7 @@ import {
   threejs,
   inveeSync,
   samsung,
-  whatsYum,
-  // aws,
-  // cplusplus,
-  // python,
-  // mysql,
-  // nextjs,
-  // postgresql,
+  whatsYum
 } from "..";
 
 export const navLinks = [
@@ -65,30 +59,6 @@ const services = [
 ];
 
 const technologies = [
-  // {
-  //   name: "cplusplus",
-  //   icon: cplusplus,
-  // },
-  // {
-  //   name: "python",
-  //   icon: python,
-  // },
-  // {
-  //   name: "mysql",
-  //   icon: mysql,
-  // },
-  // {
-  //   name: "nextjs",
-  //   icon: nextjs,
-  // },
-  // {
-  //   name: "postgresql",
-  //   icon: postgresql,
-  // },
-  // {
-  //   name: "aws",
-  //   icon: aws,
-  // },
   {
     name: "HTML 5",
     icon: html,

@@ -20,12 +20,6 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-import aws from "./tech/aws.jpeg";
-import cplusplus from "./tech/cplusplus.jpeg";
-import python from "./tech/python.png";
-import mysql from "./tech/mysql.png";
-import nextjs from "./tech/nextjs.png";
-import postgresql from "./tech/postgresql.png";
 
 import inveeSync from "./company/inveeSync.png";
 import samsung from "./company/samsung.png";
@@ -62,11 +56,5 @@ export {
   whatsYum,
   eco,
   pf,
-  pm,
-  aws,
-  cplusplus,
-  python,
-  mysql,
-  nextjs,
-  postgresql,
+  pm
 };
